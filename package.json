@@ -10,6 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "./node_modules/.bin/node-sass --watch --scss --output-style expanded deck.js/ -o deck.js/",
     "sass": "./node_modules/.bin/node-sass --scss --output-style expanded deck.js/ -o deck.js/",
+    "themes": "./node_modules/.bin/node-sass --watch --scss --output-style expanded themes/ -o themes/",
     "inline": "./node_modules/.bin/html-inline boilerplate.html > boilerplate.fpp.html"
   },
   "repository": {

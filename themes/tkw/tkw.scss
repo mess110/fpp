@@ -1,0 +1,78 @@
+@import "deck.js/themes/style/_reset.scss";
+
+.slide {
+  background-color: #red;
+  padding: 48px;
+  font-size: 18px;
+  font-family: "Open Sans";
+}
+
+.freak-out {
+  background-color: #8a2858;
+  color: white;
+}
+
+.chill {
+  background-color: #4d5058;
+  color: white;
+}
+
+.slide-img-bg {
+  // background-size: 100.1% auto;
+}
+
+h2 {
+  border-bottom: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.flex-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-presentation {
+  background: url(bg1.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  font-family: "Bebas Neue";
+
+  img {
+    width: 33%;
+    float: left;
+  }
+
+  h1 {
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .subtitle {
+    top: 57%;
+    font-size: 1.5em;
+  }
+}
+
+.outro-presentation {
+  background: url(bg2.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .right-logo {
+    width: 33%;
+    float: right;
+  }
+
+  img {
+    margin-bottom: 0px;
+  }
+}

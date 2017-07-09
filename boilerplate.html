@@ -18,10 +18,10 @@
         <link rel="stylesheet" media="screen" href="deck.js/extensions/scale/deck.scale.css">
 
         <!-- Style theme. More available in /themes/style/ or create your own. -->
-        <link rel="stylesheet" media="screen" href="deck.js/themes/style/web-2.0.css">
+        <link rel="stylesheet" media="screen" href="themes/tkw/tkw.css">
 
         <!-- Transition theme. More available in /themes/transition/ or create your own. -->
-        <link rel="stylesheet" media="screen" href="deck.js/themes/transition/horizontal-slide.css">
+        <link rel="stylesheet" media="screen" href="deck.js/themes/transition/fade.css">
 
         <!-- Basic black and white print styles -->
         <link rel="stylesheet" media="print" href="deck.js/core/print.css">
@@ -34,16 +34,72 @@
 
             <!-- Begin slides. Just make elements with a class of slide. -->
 
-            <section class="slide">
-                <h1>Slide</h1>
+            <section class="slide intro-presentation">
+                <img src="themes/tkw/logo.png" />
+                <h1>Presentation Name</h1>
+                <h1 class="subtitle">July 2017</h1>
             </section>
 
             <section class="slide">
+                <h2>How to Make a Deck</h2>
+                <ol>
+                    <li>
+                        <h3>Write Slides</h3>
+                        <p>Slide content is simple&nbsp;HTML.</p>
+                    </li>
+                    <li>
+                        <h3>Choose Themes</h3>
+                        <p>One for slide styles and one for deck&nbsp;transitions.</p>
+                    </li>
+                    <li>
+                        <h3>Include Extensions</h3>
+                        <p>Add extra functionality to your deck, or leave it stripped&nbsp;down.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section class="slide flex-slide">
+<pre class="size-60"><code class="nginx" data-result="[object Object]" data-second_best="[object Object]">void HandleStuff( CORP_DATA &amp; inputRec, int crntQtr,
+   EMP_DATA empRec, double &amp; estimRevenue, double ytdRevenue,
+   int screenX, int screenY, COLOR_TYPE &amp; newColor,
+   COLOR_TYPE &amp; prevColor, StatusType &amp; status, int expenseType )
+{
+
+int i;
+for ( i =<span class="number"> 0</span>; i &lt;<span class="number"> 100</span>; i++ ) {
+   inputRec.revenue[i] =<span class="number"> 0</span>;
+   inputRec.expense[i] = corpExpense[ crntQtr ][ i ];
+   }
+UpdateCorpDatabase( empRec );
+estimRevenue = ytdRevenue *<span class="number"> 4</span>.0 / (double) crntQtr;
+newColor = prevColor;
+status = SUCCESS;
+
+<span class="keyword">if</span> ( expenseType ==<span class="number"> 1</span> ) {
+     for ( i =<span class="number"> 0</span>; i &lt;<span class="number"> 12</span>; i++ )
+           profit[i] = revenue[i] - expense.type1[i];
+     }
+else if ( expenseType ==<span class="number"> 2</span> ) {
+          profit[i] = revenue[i] - expense.type2[i];
+          }
+
+else if ( expenseType ==<span class="number"> 3</span> )
+          profit[i] = revenue[i] - expense.type3[i];
+          }</code></pre>
+            </section>
+
+
+            <section class="slide freak-out">
                 <h1>Content</h1>
             </section>
 
-            <section class="slide">
-                <h1>Here</h1>
+            <section class="slide chill">
+                <h1>Content</h1>
+            </section>
+
+            <section class="slide outro-presentation">
+                <img class="right-logo" src="themes/tkw/logo-black.png" />
+                <h1><img src="themes/tkw/making.png" /></h1>
             </section>
 
             <!-- End slides. -->
@@ -52,16 +108,16 @@
 
             <!-- deck.navigation snippet -->
             <div aria-role="navigation">
-                <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-                <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+                <a href="#" class="deck-prev-link" title="Previous"><</a>
+                <a href="#" class="deck-next-link" title="Next">></a>
             </div>
 
             <!-- deck.status snippet -->
-            <p class="deck-status" aria-role="status">
-                <span class="deck-status-current"></span>
-                /
-                <span class="deck-status-total"></span>
-            </p>
+            <!-- <p class="deck-status" aria-role="status"> -->
+                <!-- <span class="deck-status-current"></span> -->
+                <!-- / -->
+                <!-- <span class="deck-status-total"></span> -->
+                <!-- </p> -->
 
             <!-- deck.goto snippet -->
             <form action="." method="get" class="goto-form">
