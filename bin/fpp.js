@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-var concat = require('concat-files');
-
 if (process.env.PRESENTATION === undefined) {
   console.log("PRESENTATION ENV variable required.")
   process.exit(1);
 }
+
+var concat = require('concat-files');
 
 var presentation = process.env.PRESENTATION || 'boilerplate';
 var theme = process.env.THEME || 'tkw';

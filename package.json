@@ -13,9 +13,10 @@
     "watch-deck": "./node_modules/.bin/node-sass --watch --scss --output-style expanded deck.js/ -o deck.js/",
     "watch-themes": "./node_modules/.bin/node-sass --watch --scss --output-style expanded themes/ -o themes/",
     "inline": "./node_modules/.bin/html-inline $PRESENTATION.output.html > $PRESENTATION.fpp.html",
+    "css64": "./bin/postcss.js",
     "concat": "./bin/fpp.js",
     "cleanup": "rm $PRESENTATION.output.html && echo \"Done: $PRESENTATION.fpp.html\"",
-    "start": "npm run sass && npm run concat && npm run inline && npm run cleanup"
+    "start": "npm run sass && npm run css64 && npm run concat && npm run inline && npm run cleanup"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,8 @@
     "concat-files": "^0.1.1",
     "html-inline": "^1.2.0",
     "node-sass": "^4.5.3",
+    "postcss": "^6.0.6",
+    "postcss-base64": "^0.7.1",
     "rainbow-code": "^2.1.2"
   }
 }
