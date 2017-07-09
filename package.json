@@ -1,0 +1,27 @@
+{
+  "name": "fpp",
+  "version": "0.0.1",
+  "description": "Fanstastic Power Point is a fork of [deck.js](https://github.com/imakewebthings/deck.js)",
+  "main": "boilerplate.html",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "./node_modules/.bin/node-sass --watch --scss --output-style expanded deck.js/ -o deck.js/",
+    "sass": "./node_modules/.bin/node-sass --scss --output-style expanded deck.js/ -o deck.js/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mess110/fpp.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mess110/fpp/issues"
+  },
+  "homepage": "https://github.com/mess110/fpp#readme",
+  "dependencies": {
+    "node-sass": "^4.5.3"
+  }
+}
