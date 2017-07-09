@@ -4,7 +4,7 @@ Fantastic Power Point
 
 ```
 npm install
-npm run inline
+PRESENTATION=boilerplate THEME=tkw npm run start
 ```
 
 # thanks

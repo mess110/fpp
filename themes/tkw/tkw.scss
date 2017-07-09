@@ -29,6 +29,10 @@ ol, ul {
   list-style: none;
 }
 
+pre {
+  border: none;
+}
+
 .flex-slide {
   display: flex;
   align-items: center;
@@ -36,7 +40,7 @@ ol, ul {
 }
 
 .intro-presentation {
-  background: url(bg1.png) no-repeat center center fixed;
+  background: url(themes/tkw/bg1.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -61,7 +65,7 @@ ol, ul {
 }
 
 .outro-presentation {
-  background: url(bg2.png) no-repeat center center fixed;
+  background: url(themes/tkw/bg2.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

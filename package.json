@@ -2,16 +2,20 @@
   "name": "fpp",
   "version": "0.0.1",
   "description": "Fanstastic Power Point",
-  "main": "boilerplate.html",
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "./node_modules/.bin/node-sass --watch --scss --output-style expanded deck.js/ -o deck.js/",
-    "sass": "./node_modules/.bin/node-sass --scss --output-style expanded deck.js/ -o deck.js/",
-    "themes": "./node_modules/.bin/node-sass --watch --scss --output-style expanded themes/ -o themes/",
-    "inline": "./node_modules/.bin/html-inline boilerplate.html > boilerplate.fpp.html"
+    "sass-deck": "./node_modules/.bin/node-sass --scss --output-style expanded deck.js/ -o deck.js/",
+    "sass-themes": "./node_modules/.bin/node-sass --scss --output-style expanded themes/ -o themes/",
+    "sass": "npm run sass-deck && npm run sass-themes",
+    "watch-deck": "./node_modules/.bin/node-sass --watch --scss --output-style expanded deck.js/ -o deck.js/",
+    "watch-themes": "./node_modules/.bin/node-sass --watch --scss --output-style expanded themes/ -o themes/",
+    "inline": "./node_modules/.bin/html-inline $PRESENTATION.output.html > $PRESENTATION.fpp.html",
+    "concat": "./bin/fpp.js",
+    "cleanup": "rm $PRESENTATION.output.html && echo \"Done: $PRESENTATION.fpp.html\"",
+    "start": "npm run sass && npm run concat && npm run inline && npm run cleanup"
   },
   "repository": {
     "type": "git",
@@ -24,7 +28,9 @@
   },
   "homepage": "https://github.com/mess110/fpp#readme",
   "dependencies": {
+    "concat-files": "^0.1.1",
     "html-inline": "^1.2.0",
-    "node-sass": "^4.5.3"
+    "node-sass": "^4.5.3",
+    "rainbow-code": "^2.1.2"
   }
 }
