@@ -1,0 +1,280 @@
+<section class="slide intro-presentation">
+    <img src="themes/tkw/logo.png" />
+    <h1>Writing perfect code</h1>
+    <h1 class="subtitle">July 2017</h1>
+</section>
+
+<section class="slide intro-presentation">
+    <img src="themes/tkw/logo.png" />
+    <h1>Writing <strike style="color: gray">perfect</strike> good code</h1>
+    <h1 class="subtitle">July 2017</h1>
+</section>
+
+<section class="slide">
+    <h1>What is good code?</h1>
+</section>
+
+<section class="slide chill">
+    <h1><b>Good code</b> is code which is easy to understand and easy to change</h1>
+
+    <h1 class="slide" style="position: absolute; top: 80%">
+        Assuming the code already does what we want, has the necessary performance characteristics and is not buggy.
+    </h1>
+</section>
+
+<section class="slide">
+    <h2>Why write good code?</h2>
+    <ul>
+        <li class="slide">
+            Write once, read and modify many times.
+        </li>
+
+        <li class="slide">
+            Less money and time spent on development.
+        </li>
+
+        <li class="slide">
+            Best code is the one not written.
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Technology debt</h2>
+    <ul>
+        <li class="slide">
+            Hack = borrowing from the Bank of Time
+        </li>
+
+        <li class="slide">
+            Return with interest
+        </li>
+
+        <li class="slide">
+            Like in real life: avoid debt
+        </li>
+
+        <li class="slide">
+            Like in real life: you can go bankrupt
+        </li>
+
+        <li class="slide">
+            The code becomes an unmaintainable mess
+        </li>
+    </ul>
+</section>
+
+<!-- <section class="slide flex-slide"> -->
+    <!-- <h2>Extensions</h2> -->
+    <!-- <p>Core gives you basic slide functionality with left and right arrow navigation, but you may want more. Here are the ones included in this&nbsp;deck:</p> -->
+
+<!-- <pre><code data-language="javascript">var testing = true;</code></pre> -->
+<!-- </section> -->
+
+<section class="slide flex-slide">
+    <pre><code data-language="c">void HandleStuff( CORP_DATA & inputRec, int crntQtr,
+   EMP_DATA empRec, double & estimRevenue, double ytdRevenue,
+   int screenX, int screenY, COLOR_TYPE & newColor,
+   COLOR_TYPE & prevColor, StatusType & status, int expenseType )
+{
+
+int i;
+for ( i = 0; i < 100; i++ ) {
+   inputRec.revenue[i] = 0;
+   inputRec.expense[i] = corpExpense[ crntQtr ][ i ];
+   }
+UpdateCorpDatabase( empRec );
+estimRevenue = ytdRevenue * 4.0 / (double) crntQtr;
+newColor = prevColor;
+status = SUCCESS;
+
+if ( expenseType == 1 ) {
+     for ( i = 0; i < 12; i++ )
+           profit[i] = revenue[i] - expense.type1[i];
+     }
+else if ( expenseType == 2 ) {
+          profit[i] = revenue[i] - expense.type2[i];
+          }
+
+else if ( expenseType == 3 )
+          profit[i] = revenue[i] - expense.type3[i];
+          }</code></pre>
+</section>
+
+<section class="slide inline-list">
+    <h2>What's wrong with the code?</h2>
+    <ul>
+        <li class="slide">
+            The routine has a bad name. <b>HandleStuff()</b> says nothing about what the routine does
+        </li>
+
+        <li class="slide">
+            No doc
+        </li>
+
+        <li class="slide">
+            Bad layout
+        </li>
+
+        <li class="slide">
+            Input variables are changed (inputRec)
+        </li>
+
+        <li class="slide">
+            Does too much
+        </li>
+
+        <li class="slide">
+            Division by 0 protection (crntQtr = 0)
+        </li>
+
+        <li class="slide">
+            Magic values
+        </li>
+
+        <li class="slide">
+            Unused params
+        </li>
+
+        <li class="slide">
+            Too many params
+        </li>
+
+        <li class="slide">
+            Maybe use switch?
+        </li>
+
+        <li class="slide">
+            i in loop
+        </li>
+    </ul>
+</section>
+
+<section class="slide freak-out">
+    <h1>So how do we measure good code?</h1>
+</section>
+
+<section class="slide good-code">
+</section>
+
+<section class="slide">
+    <h2>Code fearlessly</h2>
+    <ul>
+        <li class="slide">
+            All the code needs to be versioned
+        </li>
+
+        <li class="slide">
+            Do developemnt on development machines (not on production)
+        </li>
+
+        <li class="slide">
+            TDD creates a safety net
+        </li>
+    </ul>
+</section>
+
+<section class="slide inline-list">
+    <h2>Joel Test</h2>
+    <ul>
+        <li class="slide">
+            Do you use source control?
+        </li>
+        <li class="slide">
+            Can you make a build in one step?
+        </li>
+        <li class="slide">
+            Do you make daily builds?
+        </li>
+        <li class="slide">
+            Do you have a bug database?
+        </li>
+        <li class="slide">
+            Do you fix bugs before writing new code?
+        </li>
+        <li class="slide">
+            Do you have an up-to-date schedule?
+        </li>
+        <li class="slide">
+            Do you have a spec?
+        </li>
+        <li class="slide">
+            Do programmers have quiet working conditions?
+        </li>
+        <li class="slide">
+            Do you use the best tools money can buy?
+        </li>
+        <li class="slide">
+            Do you have testers?
+        </li>
+        <li class="slide">
+            Do new candidates write code during their interview?
+        </li>
+        <li class="slide">
+            Do you do hallway usability testing?
+        </li>
+    </ul>
+</section>
+
+<section class="slide inline-list">
+    <h2>What does a good project setup look like?</h2>
+    <ul>
+        <li class="slide">
+            Version control
+        </li>
+        <li class="slide">
+            Documentation exists
+        </li>
+        <li class="slide">
+            Specifications are kept up to date
+        </li>
+        <li class="slide">
+            README.md exists
+        </li>
+        <li class="slide">
+            Instructions on how to setup the project exist
+        </li>
+        <li class="slide">
+            Development happens locally
+        </li>
+        <li class="slide">
+            Backup process works
+        </li>
+        <li class="slide">
+            Syntax checking and tests (in the cloud)
+        </li>
+        <li class="slide">
+            Automatically deployed/built to (dev/alpha) on push
+        </li>
+        <li class="slide">
+            Code review with approval before deploy
+        </li>
+        <li class="slide">
+            Run security software
+        </li>
+        <li class="slide">
+            Same process to deploy to production
+        </li>
+        <li class="slide">
+            Process is triggered by the press of a button
+        </li>
+        <li class="slide">
+            Changelog exist
+        </li>
+        <li class="slide">
+            SymVer - google it
+        </li>
+        <li class="slide">
+            Everybody has permissions to do everything
+        </li>
+    </ul>
+</section>
+
+<section class="slide freak-out">
+    <h1>It is your job to make sure a project has all this shiznit</h1>
+</section>
+
+<section class="slide outro-presentation">
+    <img class="right-logo" src="themes/tkw/logo-black.png" />
+    <h1><img src="themes/tkw/making.png" /></h1>
+</section>
