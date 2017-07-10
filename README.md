@@ -10,17 +10,17 @@ inline in css, concatenates html files from theme, converts html images to
 base64 inline and saves the output as a single file which holds the entire
 presentation.
 
-Full build:
+To compile the presentation:
 
 ```
 npm install
 PRESENTATION=boilerplate THEME=tkw npm run start
 ```
 
-Rebuild only the boilerplate (faster):
+To watch in dev mode:
 
 ```
-npm run concat
+PRESENTATION=boilerplate THEME=tkw npm run dev
 ```
 
 # todo
@@ -33,6 +33,7 @@ npm run concat
 * [ ] remote control
 * [ ] generic template
 * [ ] yaml presentations
+* [ ] deconstruct presentation
 
 # thanks
 

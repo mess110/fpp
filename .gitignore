@@ -1,3 +1,4 @@
 node_modules/
 *.fpp.html
 themes/**/*.css
+*.output.html

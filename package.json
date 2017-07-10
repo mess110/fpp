@@ -16,7 +16,8 @@
     "css64": "./bin/css64.js",
     "concat": "./bin/concat.js",
     "cleanup": "rm $PRESENTATION.output.html && echo \"Done: $PRESENTATION.fpp.html\"",
-    "start": "npm run sass && npm run css64 && npm run concat && npm run inline && npm run cleanup"
+    "start": "npm run sass && npm run css64 && npm run concat && npm run inline && npm run cleanup",
+    "dev": "npm run start && ./node_modules/.bin/nodemon --exec 'npm run concat' ./$PRESENTATION.html"
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "concat-files": "^0.1.1",
     "html-inline": "^1.2.0",
     "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0",
     "postcss": "^6.0.6",
     "postcss-base64": "^0.7.1",
     "rainbow-code": "^2.1.2"
